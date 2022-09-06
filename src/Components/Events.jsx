@@ -12,16 +12,16 @@ import Calendar from './Calendar';
 
 const Events = () => {
     const [pay, setPay]  = useState (false)
-    const [looz, setLooz] = useState (false)
+    let windowwidth = window.innerWidth
 
     return (
         <>
-
+    <button onClick={() => console.log()}></button>
         <Payment pay = {pay} setPay = {setPay} />
           <motion.div>
           <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
+            slidesPerView={windowwidth < 768 ? 1 : 4}
+            spaceBetween={5}
             loop={true}
             loopFillGroupWithBlank={true}
             centeredSlides={true}
@@ -61,13 +61,10 @@ const Events = () => {
                 <BuyTickets setPay = {setPay} pay = {pay} />
                 <img src="https://www.zappa-club.co.il/obj/media/IL-eventim/teaser/evo/2x2/2022/mashinaceleb-2x2-2606.jpg" alt="" /></SwiperSlide>
           </Swiper>
-          </motion.div>
-          <br />
-          <br />
-          <button onClick={() => setLooz(!looz)}>What's the LOOZ?!</button>
-          {looz && (
+          </motion.div>  
+          <br /> 
+          <br /> 
               <Calendar />
-          )}
         </>
       );
 }
