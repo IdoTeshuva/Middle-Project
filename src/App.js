@@ -5,6 +5,10 @@ import Contact from "./Components/Contact";
 import { Route, Routes, useLocation } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import { AnimatePresence } from "framer-motion";
+import SlideShow from './Components/artistSlideShow';
+import BasicForm from './Components/BasicForm';
+import LoginForms from './Components/loginForm';
+import SignUpForms from './Components/signUpForm';
 
 function App() {
   const location = useLocation();
@@ -18,6 +22,21 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
+
+      <br/>
+      <br/> 
+      <SlideShow></SlideShow>
+      <br/>
+      <br />
+      <BasicForm></BasicForm>
+      <br/>
+      <br />
+      <LoginForms></LoginForms>
+      <br/>
+      <br />
+      <SignUpForms></SignUpForms>
+
+    
     </div>
   );
 }
