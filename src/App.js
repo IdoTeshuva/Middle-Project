@@ -9,6 +9,7 @@ import SlideShow from './Components/artistSlideShow';
 import BasicForm from './Components/BasicForm';
 import LoginForms from './Components/loginForm';
 import SignUpForms from './Components/signUpForm';
+import Events from './Components/Events';
 
 function App() {
   const location = useLocation();
@@ -36,7 +37,7 @@ function App() {
       <br />
       <SignUpForms></SignUpForms>
 
-    
+    <Events></Events>
     </div>
   );
 }
