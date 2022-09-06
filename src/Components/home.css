@@ -1,0 +1,8 @@
+.home-background{
+    margin-top:  10vh;
+    width: 100vw;
+    height: 70vh;
+    background-image: url("./middleReka.jpg");
+    background-position: center;
+    background-size: cover;
+  }
