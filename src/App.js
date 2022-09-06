@@ -24,8 +24,6 @@ function App() {
       </AnimatePresence>
 
       <br/>
-      <br/>
-      <br/>
       <br/> 
       <SlideShow></SlideShow>
       <br/>
