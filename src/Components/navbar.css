@@ -1,6 +1,6 @@
 .nav-bar {
   background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
-  opacity: 0.9;
+  opacity: 1;
   color: white;
   width: 100vw;
   height: 10vh;
@@ -9,7 +9,8 @@
   align-items: center;
   position: fixed;
   top: 0;
-  backdrop-filter: blur(0.5rem) ;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px) ;
   z-index: 4;
 }
 .nav-btn{

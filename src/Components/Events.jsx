@@ -18,11 +18,6 @@ const Events = ({UserContext}) => {
 
   const executeScroll = () => myRef.current.scrollIntoView()  
 
-  useEffect(() => {
-    if( id == 'events' ){
-       executeScroll()
-    }
-  },[]);
   
   return (
     <>

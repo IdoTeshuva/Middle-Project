@@ -1,0 +1,30 @@
+
+.search-bar-container{
+    text-align: center;
+    color: white;
+}
+
+
+.search-button {
+    background-color: rgba(240, 248, 255, 0);
+    color:rgb(87, 204, 153);
+    border: 1px solid rgb(87, 204, 153);
+    border-radius: 5px;
+    padding: 1vh;
+    cursor: pointer;
+}
+
+.search-button:active{
+    background-color: rgb(87, 204, 153);
+    color: white;
+    border: 1px solid white;
+
+}
+
+.search-input{
+    padding: 1vh;
+    border-radius: 10px;
+    width: 13vw;
+    border: 1px solid rgb(87, 204, 153);
+    margin-right: 1em;
+}

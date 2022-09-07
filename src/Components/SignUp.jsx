@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useState } from "react";
 import { basicSchema } from "./schemas/indexBasicForm";
 import "./sign-up.css";
 
@@ -19,6 +20,7 @@ const SignUp = () => {
   } = useFormik({
     initialValues: {
       email: "",
+      username: "",
       age: "",
       password: "",
       confirmPassword: "",
@@ -27,9 +29,14 @@ const SignUp = () => {
     onSubmit,
   });
 
+  const [signUpModal, setSignUpModal] = useState(false)
+
   console.log(errors);
 
   return (
+    <div className="main-signup">
+
+    
     <form onSubmit={handleSubmit} autoComplete="off">
       <label htmlFor="email">Email</label>
       <br /> {/*EDIT*/}
@@ -43,6 +50,22 @@ const SignUp = () => {
         className={errors.email && touched.email ? "input-error" : ""}
       />
       {errors.email && touched.email && <p className="error">{errors.email}</p>}
+      <br />
+      {/*EDIT*/}
+      <label htmlFor="username">username</label>
+      <br /> 
+      {/*EDIT*/}
+      <input
+        id="username"
+        type="text"
+        placeholder="enter your username"
+        value={values.username}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        className={errors.username && touched.username ? "input-error" : ""}
+      />
+      {errors.username && touched.username && <p className="error">{errors.username}</p>}
+
       <br />
       {/*EDIT*/}
       <label htmlFor="age">age</label>
@@ -100,6 +123,7 @@ const SignUp = () => {
       {/*EDIT*/}
       <button disabled={isSubmitting}>submit</button>
     </form>
+    </div>
   );
 };
 

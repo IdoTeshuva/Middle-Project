@@ -43,7 +43,7 @@
     width: 20vw;
     font-size: 25px;
 }
-button{
+/* button{
     padding: 1vw;
     background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
     color: white;
@@ -53,7 +53,7 @@ button{
 }
 button:hover{
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.273);
-}
+} */
 
 .counter{
     font-weight: 800;
