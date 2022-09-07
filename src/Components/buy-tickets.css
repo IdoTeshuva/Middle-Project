@@ -1,4 +1,4 @@
-.imgOverlay{
+.img-overlay{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,13 +14,13 @@
     transition: .5s;
 }
 
-.btn{
+.buy-t-btn{
     font-weight: 900;
     font-size: large;
     bottom: 1em;
     position: absolute;
     border-radius: .5em;
 }
-.imgOverlay:hover{
+.img-overlay:hover{
     opacity: 1;
 }
