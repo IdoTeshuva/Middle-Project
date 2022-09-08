@@ -1,22 +1,17 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import BuyTickets from "./BuyTickets";
+import React, { useState } from "react";
+import BuyTickets from "../Components/BuyTickets";
 import { motion } from "framer-motion";
-import Payment from "./Payment";
-import Calendar from "./Calendar";
+import Payment from "../Components/Payment";
+import Calendar from "../Components/Calendar";
 import "./events.css"
 
-const Events = ({UserContext}) => {
+const Events = () => {
   const [pay, setPay] = useState(false);
-  const {id} = useContext(UserContext);
   let windowwidth = window.innerWidth;
 
-  const myRef = useRef(null);
 
-  const executeScroll = () => myRef.current.scrollIntoView()  
 
   
   return (
@@ -36,7 +31,6 @@ const Events = ({UserContext}) => {
           navigation={true}
           modules={[Autoplay, Navigation]}
           className="mySwiper"
-          ref={myRef}
         >
           <SwiperSlide>
             <BuyTickets setPay={setPay} pay={pay} />

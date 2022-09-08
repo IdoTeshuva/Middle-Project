@@ -19,7 +19,7 @@ body {
   height: 50vh;
 }
 .mySwiper{
-  width: 100vw;
+  width: 99vw;
 }
 
 .swiper-slide {
@@ -70,4 +70,15 @@ body {
 .artist-header {
     margin-top: 20vh;
 }
-
+.info-button{
+  font-weight: 900;
+  font-size: large;
+  bottom: 1em;
+  border-radius: .5em;
+  padding: 1vw;
+  background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
+  color: white;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}

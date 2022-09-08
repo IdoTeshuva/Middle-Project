@@ -2,19 +2,8 @@ body{
     position: relative;
     margin: 0%;
 }
-#modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 
 
-.contact-container{
-  padding-top:  10vh;
-}
-.artists-container{
-  padding-top:  10vh;
-}
 
 
 

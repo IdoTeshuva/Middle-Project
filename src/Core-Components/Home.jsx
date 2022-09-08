@@ -1,22 +1,32 @@
-import AnimatedPage from "./AnimatedPage";
+import AnimatedPage from "../Components/AnimatedPage";
 import "./home.css";
-import SearchBar from "./SearchBar";
+import SearchBar from "../Components/SearchBar";
 import Events from "./Events";
-import ArtistSlideShow from "./ArtistSlideShow";
-import SignUp from "./SignUp.jsx";
-import { createContext, useState } from "react";
+import ArtistSlideShow from "../Components/ArtistSlideShow";
 import { motion } from "framer-motion";
-const UserContext = createContext()
+import { useSelector } from "react-redux";
+import { selectName,selectOpen  } from "../counterSlice";
+import SignUpModal from "../Components/SignUpModal";
+import "../Components/signup-modal.css"
+import LoginModal from "../Components/LoginModal";
 
 const Home = () => {
+  const name = useSelector(selectName);
+  const isOpen = useSelector(selectOpen);
 
-  const [id, setId] = useState('')
+
 
   return (
     <AnimatedPage>
       <div className="home-background">
         <div className="home-container">
           <SearchBar />
+
+
+          {isOpen &&
+        <LoginModal/>}
+          {name &&
+        <SignUpModal/>}
           <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -24,11 +34,8 @@ const Home = () => {
           <img className="main-text" src="https://i.ibb.co/CP9sbG8/text.png" alt="" />
           </motion.div>
         </div>
-        <UserContext.Provider value={{ id: 'events' }}>
-          <Events UserContext={UserContext}/>
-        </UserContext.Provider>
+          <Events/>
           <ArtistSlideShow />
-          <SignUp/>
       </div>
     </AnimatedPage>
   );

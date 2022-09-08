@@ -1,4 +1,4 @@
-.login-modal-overlay{
+.sign-up-modal-overlay{
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -6,22 +6,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 49;
     backdrop-filter: blur(6px);
     position: fixed;
+
     
 }
-.login-modal-container{
+.sign-up-modal-container{
     position: absolute;
     height: 30vh;
     width: 50vw;
     background-color: white;
     border-radius: 20px;
     color: black;
-    z-index: 3;
+    z-index: 50;
     padding: 2em;
     display: flex;
     
 
 }
-

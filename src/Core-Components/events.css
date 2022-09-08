@@ -29,7 +29,7 @@ body {
 
 .swiper-slide img {
   display: block;
-  width: 90vw;
+  width: 80vw;
   height: 50vh;
   object-fit: contain;
   transition: .5s;

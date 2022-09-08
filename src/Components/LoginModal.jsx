@@ -1,25 +1,27 @@
 import { Button, TextField } from "@mui/material";
-import { createPortal } from "react-dom";
+// import { useState } from "react";
+// import { createPortal } from "react-dom";
 import "./close-btn.css";
 import "./login-modal.css";
+// import SignUpModal from "./SignUpModal";
+import { useDispatch } from "react-redux";
+import { hello, notOpened } from "../counterSlice";
 
-const modal = document.getElementById("modal");
+// const modal = document.getElementById("modal");
 
-const LoginPopUp = ({ setIsOpen }) => {
+const LoginModal = () => {
+  const dispatch = useDispatch();
+
   const handleModalClose = () => {
-    setIsOpen(false);
+    dispatch(notOpened());
   };
-  const html = (
+  return (
     <div onClick={handleModalClose} className="login-modal-overlay">
       <div
         onClick={(e) => e.stopPropagation()}
         className="login-modal-container"
       >
-        <Button
-          variant="contained"
-          // className="modal-close-btn"
-          onClick={handleModalClose}
-        >
+        <Button variant="contained" onClick={handleModalClose}>
           X
         </Button>
         <Button variant="contained">Log In</Button>
@@ -36,10 +38,13 @@ const LoginPopUp = ({ setIsOpen }) => {
           autoComplete="current-password"
           variant="standard"
         />
+        <button onClick={() => dispatch(hello()) && handleModalClose()}>
+          Not registered?
+        </button>
       </div>
     </div>
   );
-  return createPortal(html, modal);
+  // return createPortal(html, modal);
 };
 
-export default LoginPopUp;
+export default LoginModal;

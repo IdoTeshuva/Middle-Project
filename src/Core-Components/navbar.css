@@ -9,8 +9,8 @@
   align-items: center;
   position: fixed;
   top: 0;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px) ;
+  /* -webkit-backdrop-filter: blur(20px); */
+  /* backdrop-filter: blur(20px) ; */
   z-index: 4;
 }
 .nav-btn{
@@ -18,7 +18,9 @@
 }
 
 .nav-btn:link,
-.nav-btn:visited {
+.nav-btn:visited,
+.active:link,
+.active:visited{
   font-size: 1.1rem;
   position: relative;
   text-decoration: none;
@@ -31,7 +33,7 @@
   color: white;
 }
 
-.nav-btn::after {
+.nav-btn::after{
   content: "";
   position: absolute;
   width: 100%;
@@ -44,7 +46,8 @@
   transition: 0.3s ease transform;
 }
 
-.nav-btn:hover:after {
+.nav-btn:hover:after,
+.active::after {
   transform: scaleX(1);
 }
 
@@ -52,6 +55,8 @@
   display: flex;
   z-index: 4;
   margin-left: 0.4rem;
+  list-style: none;
+
 }
 .nav-login-btn{
   background: none;
