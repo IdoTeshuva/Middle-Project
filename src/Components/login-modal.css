@@ -11,9 +11,13 @@
     position: fixed;
     
 }
+.close-login-button{
+    right: 22vw;
+}
+
 .login-modal-container{
     position: absolute;
-    height: 30vh;
+    height: 40vh;
     width: 50vw;
     background-color: white;
     border-radius: 20px;
@@ -21,7 +25,15 @@
     z-index: 3;
     padding: 2em;
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.login-button{
+    width: 15vw;
+}
+.not-reg-button{
+    width: 15vw;
 }
 

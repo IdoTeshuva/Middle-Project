@@ -2,6 +2,8 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import { basicSchema } from "./schemas/indexBasicForm";
 import "./sign-up.css";
+import { Button, TextField } from "@mui/material";
+
 
 const onSubmit = async (actions) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -29,18 +31,15 @@ const SignUp = () => {
     onSubmit,
   });
 
-  const [signUpModal, setSignUpModal] = useState(false)
-
-  console.log(errors);
-
   return (
-    <div className="main-signup">
+    <div >
 
-    
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <form  className="main-signup" onSubmit={handleSubmit} autoComplete="off">
+
+      
       <label htmlFor="email">Email</label>
-      <br /> {/*EDIT*/}
-      <input
+      <TextField
+        size="small"
         id="email"
         type="email"
         placeholder="enter your email"
@@ -50,12 +49,11 @@ const SignUp = () => {
         className={errors.email && touched.email ? "input-error" : ""}
       />
       {errors.email && touched.email && <p className="error">{errors.email}</p>}
-      <br />
-      {/*EDIT*/}
+      
+
       <label htmlFor="username">username</label>
-      <br /> 
-      {/*EDIT*/}
-      <input
+      <TextField
+        size="small"
         id="username"
         type="text"
         placeholder="enter your username"
@@ -66,12 +64,10 @@ const SignUp = () => {
       />
       {errors.username && touched.username && <p className="error">{errors.username}</p>}
 
-      <br />
-      {/*EDIT*/}
+
       <label htmlFor="age">age</label>
-      <br />
-      {/*EDIT*/}
-      <input
+      <TextField
+        size="small"
         id="age"
         type="number"
         placeholder="enter your age"
@@ -81,12 +77,12 @@ const SignUp = () => {
         className={errors.age && touched.age ? "input-error" : ""}
       />
       {errors.age && touched.age && <p className="error">{errors.age}</p>}
-      <br />
-      {/*EDIT*/}
-      <label htmlFor="password">password</label>
-      <br />
-      {/*EDIT*/}
-      <input
+
+
+
+      <label htmlFor="password">password</label>    
+      <TextField
+        size="small"
         id="password"
         type="password"
         placeholder="enter your password"
@@ -98,12 +94,11 @@ const SignUp = () => {
       {errors.password && touched.password && (
         <p className="error">{errors.password}</p>
       )}
-      <br />
-      {/*EDIT*/}
+
+
       <label htmlFor="confirmPassword">confirm password</label>
-      <br />
-      {/*EDIT*/}
-      <input
+      <TextField
+        size="small"
         id="confirmPassword"
         type="password"
         placeholder="confirm password"
@@ -117,11 +112,12 @@ const SignUp = () => {
       {errors.confirmPassword && touched.confirmPassword && (
         <p className="error">{errors.confirmPassword}</p>
       )}
+
+
+      <Button className="signup-button" disabled={isSubmitting} variant="contained">sign up</Button>
       <br />
-      {/*EDIT*/}
-      <br />
-      {/*EDIT*/}
-      <button disabled={isSubmitting}>submit</button>
+      <Button className="already-button" disabled={isSubmitting} variant="outlined" >Already have an account?</Button>
+    
     </form>
     </div>
   );

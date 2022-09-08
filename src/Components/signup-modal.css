@@ -14,14 +14,19 @@
 }
 .sign-up-modal-container{
     position: absolute;
-    height: 30vh;
+    min-height: 60vh;
     width: 50vw;
+    top: 5vh;
     background-color: white;
     border-radius: 20px;
     color: black;
     z-index: 50;
     padding: 2em;
     display: flex;
-    
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+.close-signup-button{
+    right: 22vw;
 }

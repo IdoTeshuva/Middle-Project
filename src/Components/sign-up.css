@@ -1,6 +1,11 @@
-
-
-
+.main-signup{
+    display: flex;
+    flex-direction: column;
+    width: 38vw;
+}
 button:disabled { 
     opacity: 0.35;
+}
+.signup-button{
+    margin-top: 2vh !important;
 }

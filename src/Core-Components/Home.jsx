@@ -2,7 +2,7 @@ import AnimatedPage from "../Components/AnimatedPage";
 import "./home.css";
 import SearchBar from "../Components/SearchBar";
 import Events from "./Events";
-import ArtistSlideShow from "../Components/ArtistSlideShow";
+import ArtistSlideShow from "../Components/artistSlideShow"
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { selectName,selectOpen  } from "../counterSlice";

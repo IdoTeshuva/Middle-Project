@@ -3,6 +3,7 @@ import "./signup-modal.css";
 import "./sign-up.css";
 import { useDispatch } from "react-redux";
 import { matan } from "../counterSlice";
+import { Button } from "@mui/material";
 
 const SignUpModal = () => {
   const dispatch = useDispatch();
@@ -12,8 +13,8 @@ const SignUpModal = () => {
   return (
     <div className="sign-up-modal-overlay" onClick={handleModalClose}>
       <div className="sign-up-modal-container" onClick={(e) => e.stopPropagation()}>
+        <Button className="close-signup-button" variant="contained" onClick={handleModalClose}>x</Button>
         <SignUp></SignUp>
-        <button onClick={handleModalClose}>x</button>
       </div>
     </div>
   );

@@ -1,13 +1,9 @@
 import { Button, TextField } from "@mui/material";
-// import { useState } from "react";
-// import { createPortal } from "react-dom";
 import "./close-btn.css";
 import "./login-modal.css";
-// import SignUpModal from "./SignUpModal";
 import { useDispatch } from "react-redux";
 import { hello, notOpened } from "../counterSlice";
 
-// const modal = document.getElementById("modal");
 
 const LoginModal = () => {
   const dispatch = useDispatch();
@@ -21,12 +17,13 @@ const LoginModal = () => {
         onClick={(e) => e.stopPropagation()}
         className="login-modal-container"
       >
-        <Button variant="contained" onClick={handleModalClose}>
+        <Button className="close-login-button" variant="contained" onClick={handleModalClose}>
           X
         </Button>
-        <Button variant="contained">Log In</Button>
         <TextField
-          id="standard-search"
+          id="standard-helperText"
+          helperText="Email/User Name"
+          defaultValue="User@mail.com"
           label="User Name"
           type="search"
           variant="standard"
@@ -38,9 +35,10 @@ const LoginModal = () => {
           autoComplete="current-password"
           variant="standard"
         />
-        <button onClick={() => dispatch(hello()) && handleModalClose()}>
+        <Button className="login-button" variant="contained">Log In</Button>
+        <Button className="not-reg-button" variant="outlined" onClick={() => dispatch(hello()) && handleModalClose()}>
           Not registered?
-        </button>
+        </Button>
       </div>
     </div>
   );
