@@ -1,4 +1,4 @@
-.formik1{
+.map-tlv-overlay {
     margin-top: 10vh;
     background-image: url("../Components/middleReka.jpg");
     height: 100vh;
@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
 }
-.contact-container{
+
+.map-tlv-modal {
     width: 75vw;
     height: 65vh;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.432);
@@ -20,15 +21,27 @@
     backdrop-filter: blur(20px);
     color: white;
 }
-.error{
-    color: red;
-}
-.how{
-    color: white;
+
+.map-Tlv-modal-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (max-width: 767px){
-    .formik1{
-      margin-top: 0;
-    }
-  }
+.since-header {
+    margin-top: 0;
+}
+
+.gmap_canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-Tlv-modal-txt h2 {
+    margin-bottom: 0.5%;
+}
+
+.map-Tlv-modal-txt h1 {
+    text-align: center;
+}

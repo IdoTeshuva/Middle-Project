@@ -12,7 +12,11 @@ import Shotei from "./Artists Info/ShoteiInfo";
 import Evyatar from "./Artists Info/EvyatarBanaiInfo";
 import Tamir from "./Artists Info/TamirGrinbergInfo";
 import Idan from "./Artists Info/IdanHavivInfo";
-
+import MapRamatGan from "./Components/MapRamatGan";
+import MapTlv from "./Components/MapTlv";
+import MapBeerTuvia from "./Components/MapBeerTuvia";
+import MapRishonLezion from "./Components/MapRishonLezion";
+import MobileNavBar from "./Core-Components/MobileNavBar";
 
 
 function App() {
@@ -20,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <MobileNavBar />
       <AnimatePresence exitBeforeEnter>
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
@@ -32,6 +37,10 @@ function App() {
           <Route path="/EvyatarBanai" element={<Evyatar />} />
           <Route path="/TamirGrinberg" element={<Tamir />} />
           <Route path="/IdanHaviv" element={<Idan />} />
+          <Route path="/MapRamatGan" element={<MapRamatGan />} />
+          <Route path="/MapTlv" element={<MapTlv />} />
+          <Route path="/MapBeerTuvia" element={<MapBeerTuvia />} />
+          <Route path="/MapRishonLezion" element={<MapRishonLezion />} />
         </Routes>
       </AnimatePresence>
     </div>

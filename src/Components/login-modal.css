@@ -31,9 +31,13 @@
 }
 
 .login-button{
-    width: 15vw;
+    min-width: 15vw;
+    width: auto;
 }
 .not-reg-button{
     width: 15vw;
+    width: auto;
 }
+
+
 

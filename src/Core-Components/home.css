@@ -22,3 +22,17 @@
     width: 20vw;
     height: 30vh;
   }
+
+  @media (max-width: 767px){
+    .home-background{
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 767px){
+    .main-text{
+      margin-top: 10vh;
+      width: 45vw;
+      height: 20vh;
+    }
+  }

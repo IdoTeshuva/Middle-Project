@@ -11,13 +11,13 @@ const Events = () => {
   const [pay, setPay] = useState(false);
   let windowwidth = window.innerWidth;
 
-
-
-  
   return (
     <>
       <Payment pay={pay} setPay={setPay} />
-      <motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{duration:1}}>
         <Swiper
           slidesPerView={windowwidth < 768 ? 1 : 4}
           spaceBetween={5}
@@ -25,7 +25,7 @@ const Events = () => {
           loopFillGroupWithBlank={true}
           centeredSlides={true}
           autoplay={{
-            delay: 2800,
+            delay: 3500,
             disableOnInteraction: false,
           }}
           navigation={true}

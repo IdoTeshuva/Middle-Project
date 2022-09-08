@@ -1,0 +1,87 @@
+.mobile-nav-bar {
+    background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
+    opacity: 1;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 4;
+    visibility: hidden;
+  }
+  .mobile-nav-btn{
+    margin-right: 10rem;
+  }
+  
+  .mobile-nav-btn:link,
+  .mobile-nav-btn:visited,
+  .active:link,
+  .active:visited{
+    font-size: 1.1rem;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-nav-btn:hover,
+  .mobile-nav-btn:active {
+    color: white;
+  }
+  
+  .mobile-nav-btn::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.13rem;
+    background-color: currentColor;
+    left: 0;
+    transform: scaleX(0);
+    bottom: -0.5rem;
+    transform-origin: left;
+    transition: 0.3s ease transform;
+  }
+  
+  .nav-btn:hover:after,
+  .active::after {
+    transform: scaleX(1);
+  }
+  
+  .mobile-nav-btns{
+    display: flex;
+    z-index: 4;
+    margin-left: 0.4rem;
+    list-style: none;
+  
+  }
+  .nav-login-btn{
+    background: none;
+    transition: 0.4s;
+    margin-right: 4rem;
+  }
+  .nav-login-btn:hover{
+    color: gray;
+  }
+  .mobile-logo-img{
+    width: 15rem;
+    height: 8rem;
+    
+  }
+
+  .circle{
+    width: 8rem;
+    height: 5rem;
+    position: fixed;
+    opacity: .2;
+    left: 25vw;
+    top: 87.5vh;
+  }
+  
+  @media (max-width: 767px){
+    .mobile-nav-bar{
+        visibility: visible;
+    }
+  }

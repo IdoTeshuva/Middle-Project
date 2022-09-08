@@ -70,3 +70,9 @@
   width: 6.8rem;
   height: 4rem;
 }
+
+@media (max-width: 767px){
+  .nav-bar{
+    visibility: hidden;
+  }
+}

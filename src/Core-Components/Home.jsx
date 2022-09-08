@@ -9,6 +9,7 @@ import { selectName,selectOpen  } from "../counterSlice";
 import SignUpModal from "../Components/SignUpModal";
 import "../Components/signup-modal.css"
 import LoginModal from "../Components/LoginModal";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   const name = useSelector(selectName);
@@ -34,8 +35,11 @@ const Home = () => {
           <img className="main-text" src="https://i.ibb.co/CP9sbG8/text.png" alt="" />
           </motion.div>
         </div>
+        <div>
           <Events/>
           <ArtistSlideShow />
+          <Footer></Footer>
+        </div>
       </div>
     </AnimatedPage>
   );
