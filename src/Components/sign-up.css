@@ -8,4 +8,9 @@ button:disabled {
 }
 .signup-button{
     margin-top: 2vh !important;
+    background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165))
+}
+.already-button{
+    color: black !important;
+    border: 1px solid black !important;
 }

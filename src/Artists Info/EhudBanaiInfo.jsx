@@ -6,7 +6,6 @@ const Ehud = () => {
      <AnimatedPage>
         <div className="main">
             <div className="info-card">
-
             <div className="ehud-banai-img"></div>
             <h1>Ehud Banai</h1>
             <p>Ehud Banai was born in Jerusalem. His father was the actor Yaakov Banai, one of the Banai siblings. The family moved to Givatayim when Banai was four. At the age of ten he learned to play the cello. In 1971 he was drafted to the Israel Defense Forces, and served in the Nahal infantry brigade. After his discharge, he moved to London, where he played in the London Underground for six months.

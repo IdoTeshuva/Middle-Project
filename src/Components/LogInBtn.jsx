@@ -1,5 +1,5 @@
 import LoginIcon from "@mui/icons-material/Login";
-import { opened, selectOpen } from "../counterSlice";
+import { loginOpened, selectOpen } from "../counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const LogInBtn = () => {
@@ -8,7 +8,7 @@ const LogInBtn = () => {
 
   return (
     <div className="login-container">
-        <LoginIcon className="nav-login-btn" onClick={() => dispatch(opened())}/>
+        <LoginIcon className="nav-login-btn" onClick={() => dispatch(loginOpened())}/>
     </div>
   );
 };

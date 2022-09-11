@@ -17,6 +17,9 @@ body {
 .swiper {
   width: 80vw;
   height: 50vh;
+  margin: 0;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .mySwiper{
   width: 99vw;

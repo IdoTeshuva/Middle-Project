@@ -3,30 +3,26 @@ import * as Yup from "yup";
 import React from "react";
 import "./contact.css";
 import { TextField } from "@mui/material";
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
+import { Button } from "@mui/material"
 
 const Contact = () => {
   const schema = Yup.object().shape({
     firstName: Yup.string().required("Please Enter Your First Name"),
     lastName: Yup.string().required("Please Enter Your Last Name"),
-
+    PhoneNumber: Yup.string().required("Please Enter Your Phone Number").max(10, "Not a valid number").min(10, "Not a valid number"),
     contact: Yup.string().max(200, "You can't use more than 200 characters"),
-    select: Yup.string().required("Required"),
   });
   return (
     <div className="formik1">
       <Formik
         initialValues={{
           firstName: "",
+          lastName: "",
+          PhoneNumber: "",
           contact: "",
-          select: "",
         }}
         onSubmit={(values) => {
-          alert(JSON.stringify(values));
+          alert(`Thanks for contacting us, ${values.firstName}`);
         }}
         validationSchema={schema}
       >
@@ -43,10 +39,11 @@ const Contact = () => {
             noValidate
             className="contact-container"
           >
+            <h1>Contact us!</h1>
             <TextField
               id="outlined-search"
               label="First Name"
-              type="search"
+              type="text"
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}
@@ -60,7 +57,7 @@ const Contact = () => {
             <TextField
               id="outlined-search"
               label="Last Name"
-              type="search"
+              type="text"
               name="lastName"
               placeholder="Last Name"
               onChange={handleChange}
@@ -71,10 +68,25 @@ const Contact = () => {
               {errors.lastName && touched.lastName && errors.lastName}
             </p>
 
+            <TextField
+              id="outlined-search"
+              label="Phone Number"
+              type="text"
+              name="PhoneNumber"
+              placeholder="Phone Number"
+              onChange={handleChange}
+              value={values.PhoneNumber}
+              onBlur={handleBlur}
+            />
+            <p className="error">
+              {errors.PhoneNumber && touched.PhoneNumber && errors.PhoneNumber}
+            </p>
+
             <textarea
               id="standard-search"
               variant="standard"
               type="text"
+              className="text-area"
               name="contact"
               placeholder="What's On Your Mind?"
               onChange={handleChange}
@@ -83,29 +95,7 @@ const Contact = () => {
             <p className="error">
               {errors.contact && touched.contact && errors.contact}
             </p>
-            <h3 className="how">How Did You Hear About Us?</h3>
-            <FormControl sx={{ m: 1, minWidth: 200 }}>
-              <InputLabel id="demo-simple-select-label">Choose an option</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                label="Reason"
-                onChange={handleChange}
-              >
-                <MenuItem>From a friend</MenuItem>
-                <MenuItem>From a family member</MenuItem>
-                <MenuItem>From an online ad</MenuItem>
-              </Select>
-            </FormControl>
-
-
-            {values.select === "Other" && (
-              <input placeholder="Other..."></input>
-            )}
-            <p className="error">
-              {errors.select && touched.select && errors.select}
-            </p>
-            <button type="submit">Submit</button>
+            <Button variant="contained" className="submit-contact" type="submit">Submit</Button>
           </form>
         )}
       </Formik>

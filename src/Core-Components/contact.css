@@ -6,6 +6,16 @@
     display: flex;
     justify-content: center;
 }
+
+.formik1 input{
+    border: 1px solid white !important;
+    border-radius: 4px;
+    width: 20vw;
+}
+
+.text-area{
+    width: 20vw;
+}
 .contact-container{
     width: 75vw;
     height: 65vh;
@@ -27,8 +37,18 @@
     color: white;
 }
 
+.submit-contact{
+    background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
+
+}
+
+
 @media (max-width: 767px){
     .formik1{
       margin-top: 0;
+    }
+    .text-area{
+        width: 25vw;
+        height: 10vh;
     }
   }

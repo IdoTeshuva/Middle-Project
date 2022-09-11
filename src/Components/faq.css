@@ -1,4 +1,4 @@
-.map-ramat-gan-overlay {
+.Faq-overlay {
     margin-top: 10vh;
     background-image: url("../Components/middleReka.jpg");
     height: 100vh;
@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.map-ramat-gan-modal {
+.Faq-modal {
     width: 75vw;
     height: 65vh;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.432);
@@ -16,37 +16,32 @@
     margin: 10vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     backdrop-filter: blur(20px);
     color: white;
 }
-
-.map-RamatGan-modal-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.since-header {
-    margin-top: 0;
-}
-
-.gmap_canvas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.map-RamatGan-modal-txt h2 {
-    margin-bottom: 0.5%;
-}
-
-.map-RamatGan-modal-txt h1 {
+.Faq-modal h1{
     text-align: center;
 }
+
+.Faq-modal h4 {
+    margin-bottom: 0%;
+    margin-left: 1vw;
+}
+
+.Faq-modal p {
+    margin-left: 1vw;
+}
+
+.faq-heade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @media (max-width: 767px){
-    .map-ramat-gan-overlay{
-      margin-top: 0;
+    
+    .Faq-modal p{
+        font-size: 10px;
     }
-  }
+
+}

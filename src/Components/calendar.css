@@ -1,0 +1,12 @@
+.calendar-button{
+    background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
+    font-weight: 800 !important;
+    box-shadow: none;
+}
+@media (max-width: 767px){
+
+        .calendar-iframe{
+            width: 100vw;
+            height: 50vh;
+        }
+}

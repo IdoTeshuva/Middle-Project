@@ -45,3 +45,9 @@
 .map-Tlv-modal-txt h1 {
     text-align: center;
 }
+
+@media (max-width: 767px){
+    .map-tlv-overlay{
+      margin-top: 0;
+    }
+  }

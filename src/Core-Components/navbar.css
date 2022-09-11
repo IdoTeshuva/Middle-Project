@@ -54,7 +54,7 @@
 .nav-btns{
   display: flex;
   z-index: 4;
-  margin-left: 0.4rem;
+  margin-left: 6rem;
   list-style: none;
 
 }
@@ -67,8 +67,10 @@
   color: gray;
 }
 .logo-img{
-  width: 6.8rem;
-  height: 4rem;
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 6rem;
 }
 
 @media (max-width: 767px){

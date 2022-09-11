@@ -13,6 +13,8 @@
 }
 .close-login-button{
     right: 22vw;
+    color: black !important;
+    border: 1px solid black !important;
 }
 
 .login-modal-container{
@@ -33,11 +35,20 @@
 .login-button{
     min-width: 15vw;
     width: auto;
+    background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
 }
 .not-reg-button{
     width: 15vw;
     width: auto;
+    color: black !important;
+    border: 1px solid black !important;    
 }
 
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 

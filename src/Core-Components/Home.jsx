@@ -10,6 +10,9 @@ import SignUpModal from "../Components/SignUpModal";
 import "../Components/signup-modal.css"
 import LoginModal from "../Components/LoginModal";
 import Footer from "../Components/Footer";
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import { useState } from "react";
+import Calendar from "../Components/Calendar";
 
 const Home = () => {
   const name = useSelector(selectName);
@@ -21,8 +24,11 @@ const Home = () => {
     <AnimatedPage>
       <div className="home-background">
         <div className="home-container">
+          <a href="#" className="up-button"><ArrowCircleUpIcon /></a>
+         
+        <div>
           <SearchBar />
-
+        </div>
 
           {isOpen &&
         <LoginModal/>}
@@ -35,9 +41,31 @@ const Home = () => {
           <img className="main-text" src="https://i.ibb.co/CP9sbG8/text.png" alt="" />
           </motion.div>
         </div>
+          
         <div>
           <Events/>
+          <div className="mid-background">
+          <motion.div
+            initial={{ opacity: 1 , x: -500, scale: 1}}
+            whileInView={{ opacity: 1, x:0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{duration:1}}
+            >
+              <h1>It's different when it's LIVE.</h1>
+          </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 1 , scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{duration:1}}
+            >
+
           <ArtistSlideShow />
+          </motion.div>
+          <div className="calendar-div">
+          <Calendar />
+          </div>
           <Footer></Footer>
         </div>
       </div>

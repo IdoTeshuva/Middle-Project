@@ -17,6 +17,10 @@ import MapTlv from "./Components/MapTlv";
 import MapBeerTuvia from "./Components/MapBeerTuvia";
 import MapRishonLezion from "./Components/MapRishonLezion";
 import MobileNavBar from "./Core-Components/MobileNavBar";
+import About from "./Core-Components/AboutUs";
+import JoinUs from "./Components/JoinUs";
+import FAQ from "./Components/FAQ";
+import TermsOfUse from "./Components/TermsOfUse";
 
 
 function App() {
@@ -29,6 +33,7 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/AboutUs" element={<About />} />
           <Route path="/OmerAdam" element={<Omer />} />
           <Route path="/EhudBanai" element={<Ehud />} />
           <Route path="/AvivGeffen" element={<Aviv />} />
@@ -41,6 +46,9 @@ function App() {
           <Route path="/MapTlv" element={<MapTlv />} />
           <Route path="/MapBeerTuvia" element={<MapBeerTuvia />} />
           <Route path="/MapRishonLezion" element={<MapRishonLezion />} />
+          <Route path="/JoinUs" element={<JoinUs />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/TermsOfUse" element={<TermsOfUse />} />
         </Routes>
       </AnimatePresence>
     </div>

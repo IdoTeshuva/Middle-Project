@@ -1,11 +1,12 @@
 .home-background{
     margin-top:  10vh;
-    width: 99.1vw;
+    width: 100vw;
     height: 70vh;
     background-image: url("../Components/middleReka.jpg");
     background-position: center;
     background-size: cover;
     position: sticky;
+    background-attachment: fixed;
 
   }
 
@@ -16,16 +17,60 @@
     align-items: center;
     
   }
+  .mid-background{
+    height: 20vh;
+    margin-top: 5vh;
+    width: 100vw;
+    background-image: url("../Components/middleReka.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.406);
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
   .main-text{
     margin-top: 10vh;
     width: 20vw;
     height: 30vh;
+    
+  }
+
+  .up-button{
+    border-radius: 10px;
+    background: linear-gradient(90deg,rgb(87, 204, 153), rgb(56, 163, 165));
+    position: fixed;
+    bottom: 5em;
+    right: 5em;
+    z-index: 5;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.291);
+    display: flex;
+    justify-content: center;
+    padding: .8em;
+    color: white;
+  }
+
+  .calendar-div{
+    text-align: center;
+    margin-bottom: 5vh;
   }
 
   @media (max-width: 767px){
     .home-background{
       margin-top: 0;
+      /* padding-bottom: 20vh; */
+    }
+    .up-button{
+      right: 2em;
+      bottom: 6.5em;
+      opacity: .9;
+      padding: .3em;
+
     }
   }
 

@@ -29,4 +29,6 @@
 }
 .close-signup-button{
     right: 22vw;
+    color: black !important;
+    border: 1px solid black !important;
 }

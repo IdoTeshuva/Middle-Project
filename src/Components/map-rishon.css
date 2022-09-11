@@ -46,3 +46,8 @@
     text-align: center;
 }
 
+@media (max-width: 767px){
+    .map-rishon-overlay{
+      margin-top: 0;
+    }
+  }

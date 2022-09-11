@@ -45,3 +45,9 @@
 .map-Tuvia-modal-txt h1 {
     text-align: center;
 }
+
+@media (max-width: 767px){
+    .map-Tuvia-overlay{
+      margin-top: 0;
+    }
+  }

@@ -13,7 +13,7 @@
     visibility: hidden;
   }
   .mobile-nav-btn{
-    margin-right: 10rem;
+    padding: 2.5rem;
   }
   
   .mobile-nav-btn:link,
@@ -57,6 +57,12 @@
     list-style: none;
   
   }
+
+  .mobile-nav-btns li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .nav-login-btn{
     background: none;
     transition: 0.4s;
@@ -69,15 +75,6 @@
     width: 15rem;
     height: 8rem;
     
-  }
-
-  .circle{
-    width: 8rem;
-    height: 5rem;
-    position: fixed;
-    opacity: .2;
-    left: 25vw;
-    top: 87.5vh;
   }
   
   @media (max-width: 767px){

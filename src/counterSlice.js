@@ -2,25 +2,35 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice = createSlice({
   name: "counter",
-  initialState: { nameValue: false, openValue: false},
+  initialState: { nameValue: false, openValue: false, logValue: false},
   reducers: {
-    hello: (state) => {
+    regisOpened: (state) => {
       state.nameValue = true;
     },
-    matan: (state) => {
+    regisNotOpened: (state) => {
       state.nameValue = false;
     },
-    opened: (state) => {
+    loginOpened: (state) => {
       state.openValue = true;
     },
-    notOpened: (state) => {
+    loginNotOpened: (state) => {
       state.openValue = false;
     },
+    logged: (state) => {
+      state.logValue = true;
+    },
+    notLogged: (state) => {
+      state.logValue = false;
+    },
+    // changeName: (state) => {
+    //   state.loginName = loginName;
+    // }
   },
 });
 
-export const { hello,matan,opened,notOpened } = counterSlice.actions;
+export const { regisOpened,regisNotOpened,loginOpened,loginNotOpened, logged, notLogged } = counterSlice.actions;
 export const selectName = (state) => state.counter.nameValue;
 export const selectOpen = (state) => state.counter.openValue;
+export const selectLog = (state) => state.counter.logValue;
 
 export default counterSlice.reducer;

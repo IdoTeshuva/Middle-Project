@@ -1,7 +1,9 @@
 .payOverlay{
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     width: 100vw;
-    position: absolute;
+    top: 5vh;
+    position: fixed;
     background-color: rgba(0, 0, 0, 0.557);
     display: flex;
     z-index: 2;
@@ -13,7 +15,7 @@
 
 .payModal{
     position: absolute;
-    height: 53vh;
+    height: auto;
     width: 40vw;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
@@ -21,8 +23,6 @@
     z-index: 3;
     padding: 2em;
     display: block;
-    border: 1px solid rgb(56, 163, 165);
-    border-bottom: 8px solid rgb(56, 163, 165);
 }
 .tickets{
  text-align: center;
@@ -38,7 +38,6 @@
     color: white !important; 
     border-radius: 10px;
     border: none;
-    left: 25%;
     position: relative ;
     margin-top: 3vh !important;
     font-weight: 900;
@@ -70,27 +69,47 @@
     flex-direction: column;
     align-items: center;
     font-weight: 400;
-
+}
+.credit form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .credit input{
     height: 3vh;
     width: 20vw;
     border-radius: 10px;
     border: none;
-    text-align: center;
+    /* text-align: center; */
 
 }
 
-.inputShort{
-    width: 9vw !important;
-}
+
 .formGroup{
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 9vw;
 }
 .form__cardInfo{
 width: 30vw;
 display: flex;
 justify-content:space-evenly;
 }
+
+@media (max-width: 767px){
+    .payOverlay{
+        top: -2vh;
+    }
+    .payModal{
+      width: 85vw;
+    }
+    .credit input{
+        width: 80vw;
+    }
+    .formGroup{
+        width: 30vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+  }

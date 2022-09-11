@@ -3,14 +3,22 @@ import { useState } from "react";
 import { basicSchema } from "./schemas/indexBasicForm";
 import "./sign-up.css";
 import { Button, TextField } from "@mui/material";
+import { regisNotOpened, loginOpened} from "../counterSlice";
+import { useDispatch } from "react-redux";
 
 
-const onSubmit = async (actions) => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
+
+
 
 const SignUp = () => {
+  const handleModalClose = () => {
+    dispatch(regisNotOpened());
+    dispatch(loginOpened());}
+const dispatch = useDispatch();
+  const onSubmit = async (actions) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+  };
   const {
     values,
     errors,
@@ -27,8 +35,8 @@ const SignUp = () => {
       password: "",
       confirmPassword: "",
     },
-    validationSchema: basicSchema,
-    onSubmit,
+    
+    validationSchema: basicSchema 
   });
 
   return (
@@ -74,7 +82,7 @@ const SignUp = () => {
         value={values.age}
         onChange={handleChange}
         onBlur={handleBlur}
-        className={errors.age && touched.age ? "input-error" : ""}
+        className={errors.age && touched.age && errors.age}
       />
       {errors.age && touched.age && <p className="error">{errors.age}</p>}
 
@@ -114,9 +122,9 @@ const SignUp = () => {
       )}
 
 
-      <Button className="signup-button" disabled={isSubmitting} variant="contained">sign up</Button>
+      <Button type="submit" className="signup-button" disabled={isSubmitting} variant="contained">sign up</Button>
       <br />
-      <Button className="already-button" disabled={isSubmitting} variant="outlined" >Already have an account?</Button>
+      <Button className="already-button" onClick={handleModalClose} variant="outlined" >Already have an account?</Button>
     
     </form>
     </div>

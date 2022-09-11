@@ -97,9 +97,7 @@ const Events = () => {
           </SwiperSlide>
         </Swiper>
       </motion.div>
-      {/* <br />edit */}
-      {/* <br />edit */}
-      <Calendar />
+      {/* <Calendar /> */}
     </>
   );
 };
