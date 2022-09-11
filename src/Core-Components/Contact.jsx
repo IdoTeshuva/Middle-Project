@@ -44,6 +44,7 @@ const Contact = () => {
               id="outlined-search"
               label="First Name"
               type="text"
+              // color="success"
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}

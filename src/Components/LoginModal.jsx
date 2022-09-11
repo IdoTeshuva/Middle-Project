@@ -40,6 +40,7 @@ const LoginModal = () => {
         }}
         onSubmit={(values) => {
           alert(`Welcome Back ${values.Username}`)
+          handleLogin()
         }}
         validationSchema={schema}
         >
@@ -53,7 +54,7 @@ const LoginModal = () => {
           }) => (
          <form
          className="login-form"
-         onSubmit={handleSubmit && handleLogin}
+         onSubmit={handleSubmit}
          noValidate
          >  
         <TextField

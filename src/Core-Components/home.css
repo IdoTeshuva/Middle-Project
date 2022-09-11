@@ -53,6 +53,10 @@
     justify-content: center;
     padding: .8em;
     color: white;
+    transition: .5s;
+  }
+  .up-button:hover{
+    padding: 1em;
   }
 
   .calendar-div{
