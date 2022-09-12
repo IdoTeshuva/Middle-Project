@@ -41,7 +41,10 @@ const NavBar = () => {
           </NavLink>
         </li>
       </ul>
-      {isLogged ? <LoginIcon /> : <LogInBtn />}
+      <li className='nav-login-btn'>
+        {isLogged ? <LoginIcon /> : <LogInBtn />}
+        <h1></h1>
+        </li>
     </nav>
   );
 };

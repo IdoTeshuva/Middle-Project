@@ -53,7 +53,7 @@
   .mobile-nav-btns{
     display: flex;
     z-index: 4;
-    margin-left: 0.4rem;
+    margin-left: -3.6rem;
     list-style: none;
   
   }
@@ -63,17 +63,22 @@
     justify-content: center;
     align-items: center;
   }
-  .nav-login-btn{
+  /* .nav-login-btn{
     background: none;
     transition: 0.4s;
     margin-right: 4rem;
     cursor: pointer;
-  }
+  } */
 
   .mobile-logo-img{
     width: 15rem;
     height: 8rem;
     
+  }
+  .mobile-nav-login-btn{
+    background: none;
+    transition: 0.4s;
+    padding-bottom: 0.8rem;
   }
   
   @media (max-width: 767px){

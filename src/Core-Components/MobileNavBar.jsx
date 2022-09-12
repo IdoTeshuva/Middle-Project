@@ -1,11 +1,16 @@
 import LogInBtn from "../Components/LogInBtn";
 import "./mobile-navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import InfoIcon from '@mui/icons-material/Info';
+import { useSelector } from "react-redux";
+import { selectLog  } from "../counterSlice";
+import LoginIcon from "./LoginIcon";
 
 const MobileNavBar = () => {
+  const isLogged = useSelector(selectLog);
+
   return (
     <>
     
@@ -26,10 +31,11 @@ const MobileNavBar = () => {
             <InfoIcon  />
           </NavLink>
         </li>
-        <li className='mobile-nav-btn'>
-      <LogInBtn />
+        <li className='mobile-nav-login-btn'>
+        {isLogged ? <LoginIcon /> : <LogInBtn />}
         </li>
       </ul>
+
     </nav>
     </>
   );

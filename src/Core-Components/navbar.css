@@ -61,10 +61,12 @@
 .nav-login-btn{
   background: none;
   transition: 0.4s;
-  margin-right: 7rem;
+  padding-top: 0.8rem;
+  padding-right: 1.2rem;
+  list-style: none;
 }
 .logged-btn{
-  margin-right: 3.84rem;
+
 }
 
 .nav-login-btn:hover{
