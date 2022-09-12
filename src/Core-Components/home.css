@@ -1,8 +1,3 @@
-
-body{
-  scroll-behavior: smooth;
-
-}
 .home-background{
     margin-top:  10vh;
     width: 100vw;
@@ -12,7 +7,6 @@ body{
     background-size: cover;
     position: sticky;
     background-attachment: fixed;
-
   }
 
   .home-container{
