@@ -16,7 +16,7 @@ import Calendar from "../Components/Calendar";
 const Home = () => {
   const name = useSelector(selectName);
   const isOpen = useSelector(selectOpen);
-
+  let windowwidth = window.innerWidth;
 
 
   return (
@@ -34,7 +34,7 @@ const Home = () => {
           {name &&
         <SignUpModal/>}
           <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{  opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{duration:1}}>
           <img className="main-text" src="https://i.ibb.co/CP9sbG8/text.png" alt="" />
@@ -44,6 +44,7 @@ const Home = () => {
         <div>
           <Events/>
           <div className="mid-background">
+         { windowwidth > 768 ?
           <motion.div
             initial={{ opacity: 1 , x: -500, scale: 1}}
             whileInView={{ opacity: 1, x:0, scale: 1 }}
@@ -52,6 +53,16 @@ const Home = () => {
             >
               <h1>It's different when it's LIVE.</h1>
           </motion.div>
+         :
+          <motion.div
+            initial={{ opacity: 1 , scale: 1}}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{duration:1}}
+            >
+              <h1>It's different when it's LIVE.</h1>
+          </motion.div> 
+          }
           </div>
           <motion.div
             initial={{ opacity: 1 , scale: 0.5 }}

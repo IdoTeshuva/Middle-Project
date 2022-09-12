@@ -69,7 +69,7 @@ const ArtistSlideShow = () => {
 
         <SwiperSlide>
           <div className="artist-overlay">
-            <h1 className="artist-header">Ehuad Banai</h1>
+            <h1 className="artist-header">Ehud Banai</h1>
             <Link to="./EhudBanai">
               <button className="info-button">Info</button>
             </Link>

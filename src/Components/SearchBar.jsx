@@ -31,7 +31,7 @@ setTimeout(()=>{ref.current?.classList.add('hidden')
           onFocus={inputFocusHandler}
           onBlur={inputBlurHandler}
           onChange={onChangeInput}
-          placeholder="Search Your Favourite Artist..."
+          placeholder="Find Your Artist..."
         ></input>
         <div className="dropdown" ref={ref}>
           {data
