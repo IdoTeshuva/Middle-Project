@@ -1,5 +1,4 @@
 import { useFormik } from "formik";
-import { useState } from "react";
 import { basicSchema } from "./schemas/indexBasicForm";
 import "./sign-up.css";
 import { Button, TextField } from "@mui/material";
@@ -11,10 +10,7 @@ const SignUp = () => {
     dispatch(regisNotOpened());
     dispatch(loginOpened());}
 const dispatch = useDispatch();
-  const onSubmit = async (actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
-  };
+
   const {
     values,
     errors,
