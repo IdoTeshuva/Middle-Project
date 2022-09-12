@@ -15,8 +15,9 @@
 .sign-up-modal-container{
     position: absolute;
     min-height: 60vh;
+    max-height: 82vh;
     width: 50vw;
-    top: 5vh;
+    top: 0;
     background-color: white;
     border-radius: 20px;
     color: black;
@@ -33,6 +34,11 @@
     border: 1px solid black !important;
     max-width: 5px !important;
     min-width: 0px !important;
+}
 
-
+@media (max-width: 767px){
+.sign-up-modal-container{
+    margin-top: 1vh;
+    font-size: 15px;
+}
 }
