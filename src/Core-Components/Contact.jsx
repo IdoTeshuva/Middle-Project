@@ -42,9 +42,7 @@ const Contact = () => {
             <h1>Contact us!</h1>
             <TextField
               id="outlined-search"
-              label="First Name"
               type="text"
-              // color="success"
               name="firstName"
               placeholder="First Name"
               onChange={handleChange}
@@ -57,7 +55,6 @@ const Contact = () => {
             </p>
             <TextField
               id="outlined-search"
-              label="Last Name"
               type="text"
               name="lastName"
               placeholder="Last Name"
@@ -71,7 +68,6 @@ const Contact = () => {
 
             <TextField
               id="outlined-search"
-              label="Phone Number"
               type="text"
               name="PhoneNumber"
               placeholder="Phone Number"

@@ -47,6 +47,10 @@
     .formik1{
       margin-top: 0;
     }
+    .contact-container{
+        width: max-content;
+        height: max-content;
+    }
     .text-area{
         width: 25vw;
         height: 10vh;

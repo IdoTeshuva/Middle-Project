@@ -11,7 +11,6 @@ import "../Components/signup-modal.css"
 import LoginModal from "../Components/LoginModal";
 import Footer from "../Components/Footer";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
-import { useState } from "react";
 import Calendar from "../Components/Calendar";
 
 const Home = () => {
@@ -24,7 +23,7 @@ const Home = () => {
     <AnimatedPage>
       <div className="home-background">
         <div className="home-container">
-          <a href="#" className="up-button"><ArrowCircleUpIcon /></a>
+          <button onClick={()=>{window.scrollTo({top:0,left:0,behavior: "smooth"})}} href="#" className="up-button"><ArrowCircleUpIcon /></button>
          
         <div>
           <SearchBar />

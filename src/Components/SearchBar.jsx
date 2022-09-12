@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {Link} from "react-router-dom";
 import "./search-bar.css";
 const data = require("./artist-data.json");
 
 const SearchBar = () => {
   const [value, setValue] = useState("");
+  const ref = useRef('')
   const onChangeInput = (event) => {
     setValue(event.target.value);
   };
+
+  const inputFocusHandler=()=>{
+    ref.current?.classList.remove('hidden')
+    }
+
+const inputBlurHandler=()=>{
+
+setTimeout(()=>{ref.current?.classList.add('hidden')
+},200)
+}
 
   return (
     <div className="search-container">
@@ -17,10 +28,12 @@ const SearchBar = () => {
           className="search-input"
           type="text"
           value={value}
+          onFocus={inputFocusHandler}
+          onBlur={inputBlurHandler}
           onChange={onChangeInput}
-          placeholder="Search event..."
+          placeholder="Search Your Favourite Artist..."
         ></input>
-        <div className="dropdown">
+        <div className="dropdown" ref={ref}>
           {data
             .filter((item) => {
               const searchTerm = value.toLowerCase();

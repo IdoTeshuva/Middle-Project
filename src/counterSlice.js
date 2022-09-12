@@ -22,15 +22,17 @@ export const counterSlice = createSlice({
     notLogged: (state) => {
       state.logValue = false;
     },
-    // changeName: (state) => {
-    //   state.loginName = loginName;
-    // }
+    changeName: (state,payload) => {
+      state.loginName = payload.payload;
+    }
   },
 });
 
-export const { regisOpened,regisNotOpened,loginOpened,loginNotOpened, logged, notLogged } = counterSlice.actions;
+export const { regisOpened,regisNotOpened,loginOpened,loginNotOpened, logged, notLogged,changeName} = counterSlice.actions;
 export const selectName = (state) => state.counter.nameValue;
 export const selectOpen = (state) => state.counter.openValue;
 export const selectLog = (state) => state.counter.logValue;
+export const loginName = (state) => state.counter.loginName;
+
 
 export default counterSlice.reducer;

@@ -1,6 +1,6 @@
 .main{
     margin-top: 4vh;
-    height: 100vh;
+    height: 96vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -9,25 +9,31 @@
 }
 .info-card{
     width: 75vw;
-    height: 65vh;
+    height: 80%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.432);
     border-radius: 10px;
     top: 20vh;
     margin: 10vh;
-    display: flex;
+    /* display: flex;
     align-items: flex-start;
     text-align: left;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column; */
     backdrop-filter: blur(20px);
     color: white;
+    overflow: hidden;
 }
-.ehud-banai-img{
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.img{
     height: 30em;
     width: 20em;
     margin: 2em;
     padding-top: 5em;
-    background-image: url(https://i.ibb.co/Vvb9Z9j/ehud.jpg);
+    background-image: url(https://i.ibb.co/8cyYC6R/tamir.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
@@ -35,15 +41,20 @@
 
 }
 
+.artist-img{
+    width: 20rem;
+    height: 30rem;
+    margin-right: 3vw;
+}
+
 .main p{
-    width: 60%;
     font-size: 20px;
 }
 @media (max-width: 767px){
     .main{
         margin-top: 0;
     }
-    .ehud-banai-img{
+    .img{
       height: 4em;
       width: 10em;
       background-size:10em;

@@ -19,6 +19,7 @@ const NavBar = () => {
         <img
           className='logo-img'
           src="https://i.ibb.co/hdBGDk3/logo-white.png"
+          alt=""
         ></img>
       </Link>
     </motion.div>

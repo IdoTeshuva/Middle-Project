@@ -2,7 +2,7 @@ import { Button, TextField } from "@mui/material";
 import "./close-btn.css";
 import "./login-modal.css";
 import { useDispatch } from "react-redux";
-import { regisOpened, loginNotOpened, logged } from "../counterSlice";
+import { regisOpened, loginNotOpened, logged ,changeName} from "../counterSlice";
 import * as Yup from "yup";
 import { Formik } from "formik";
 
@@ -12,12 +12,9 @@ const LoginModal = () => {
   const handleModalClose = () => {
     dispatch(loginNotOpened());
   };
-  const handleLoginName = () => {
-    ;
-  };
   const handleLogin = (e) => {
     dispatch(logged());
-    e.preventDefault()
+    e?.preventDefault()
   };
   const schema = Yup.object().shape({
     Username: Yup.string().required("Please enter your username"),
@@ -30,17 +27,16 @@ const LoginModal = () => {
         onClick={(e) => e.stopPropagation()}
         className="login-modal-container"
       >
-        <Button className="close-login-button" variant="outlined" onClick={handleModalClose}>
-          X
-        </Button>
+        <Button className="close-login-button" variant="outlined" onClick={handleModalClose}>X</Button>
         <Formik
         initialValues={{
           Username: "",
           Password: ""
         }}
         onSubmit={(values) => {
-          alert(`Welcome Back ${values.Username}`)
-          handleLogin()
+          dispatch(changeName(values.Username))
+          handleLogin();
+          handleModalClose();
         }}
         validationSchema={schema}
         >

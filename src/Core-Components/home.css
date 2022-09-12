@@ -1,3 +1,8 @@
+
+body{
+  scroll-behavior: smooth;
+
+}
 .home-background{
     margin-top:  10vh;
     width: 100vw;
@@ -46,7 +51,7 @@
     position: fixed;
     bottom: 5em;
     right: 5em;
-    z-index: 5;
+    z-index: 2;
     border: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.291);
     display: flex;
@@ -55,9 +60,12 @@
     color: white;
     transition: .5s;
   }
-  .up-button:hover{
-    padding: 1em;
+  @media only screen and (pointer:fine) and (hover:hover) {
+    .up-button:hover{
+      padding: 1em;
+    }
   }
+ 
 
   .calendar-div{
     text-align: center;
@@ -67,7 +75,6 @@
   @media (max-width: 767px){
     .home-background{
       margin-top: 0;
-      /* padding-bottom: 20vh; */
     }
     .up-button{
       right: 2em;
@@ -76,12 +83,10 @@
       padding: .3em;
 
     }
-  }
-
-  @media (max-width: 767px){
     .main-text{
       margin-top: 10vh;
       width: 45vw;
       height: 20vh;
     }
   }
+

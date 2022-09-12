@@ -12,15 +12,17 @@
     
 }
 .close-login-button{
-    right: 22vw;
     color: black !important;
     border: 1px solid black !important;
+    max-width: 5px !important;
+    align-self: flex-start;
+    min-width: 0px !important;
 }
 
 .login-modal-container{
     position: absolute;
-    height: 40vh;
-    width: 50vw;
+    height: max-content;
+    width: 30vw;
     background-color: white;
     border-radius: 20px;
     color: black;

@@ -67,10 +67,9 @@
     background: none;
     transition: 0.4s;
     margin-right: 4rem;
+    cursor: pointer;
   }
-  .nav-login-btn:hover{
-    color: gray;
-  }
+
   .mobile-logo-img{
     width: 15rem;
     height: 8rem;
@@ -80,5 +79,10 @@
   @media (max-width: 767px){
     .mobile-nav-bar{
         visibility: visible;
+    }
+    .nav-login-btn:visited,
+    .nav-login-btn:hover,
+    .nav-login-btn:active{
+      color: white;
     }
   }
