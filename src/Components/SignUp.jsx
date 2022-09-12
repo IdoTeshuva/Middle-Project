@@ -40,7 +40,7 @@ const dispatch = useDispatch();
       <label htmlFor="email">Email</label>
       <TextField
         size="small"
-        id="Email"
+        id="email"
         type="email"
         placeholder="enter your email"
         value={values.email}
