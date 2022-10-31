@@ -1,6 +1,8 @@
 # Paza
 This project is a concert website-was built after 1 month into the course.
 The application consists of a listing of all the shows, artists and locations of our places, as well as a details page for each artist, including information about the artist.
+<br/>
+Website Link: https://pazaa.netlify.app/
 
 The app was created with the use of:
 
